@@ -1,0 +1,98 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#main{
+    text-align: center;
+}
+.first{
+    position: relative;
+    background: url("../img/9.jpg");
+    font-size: 36px;
+    text-align: center;
+    color: white;
+}
+.box1{
+    width:400px;
+    height:200px;
+    /*background:red;*/
+    position:absolute;
+    top:50%;
+    margin-top:-100px;
+    left:650px;
+    display:none;
+}
+.box2{
+    width:400px;
+    height:200px;
+    /*background:red;*/
+    position:absolute;
+    right:650px;
+    display:none;
+    top:50%;
+    margin-top:-100px;
+}
+@keyframes leftIn {
+    0%{
+        transform: translate3d(-1100px,0,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
+    }
+}
+.leftIn{
+    animation: leftIn 1s ease-in;
+    display:block;
+}
+@keyframes rightIn{
+    0%{
+        transform: translate3d(1100px,0,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
+    }
+}
+.rightIn{
+    animation: rightIn 1s ease-in;
+    display:block;
+}
+@keyframes leftOut{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-1100px,0,0);
+    }
+}
+.leftOut{
+    animation: leftOut .3s ease-in forwards;
+    display:block;
+}
+@keyframes reftOut{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(1100px,0,0);
+    }
+}
+.reftOut{
+    animation: reftOut .3s ease-in forwards;
+    display:block;
+}
+.num1{
+    background: url(../img/5.jpg);
+    background-size: cover;
+}
+.num2{
+    background: url(../img/7.jpg);
+    background-size: cover;
+}
+.num3{
+    background: url(../img/10.jpg);
+    background-size: cover;
+}
+.jie{
+    z-index: 999;
+}
