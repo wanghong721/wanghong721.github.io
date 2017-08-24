@@ -122,9 +122,9 @@ $("#rem1").click(function () {
 // $(".num").on("click","p",function () {
 //     alert($(this).html());
 // })
-$(".left .kuai").css("background","#0AA6E8").click(function () {
-    $(".left .kuai").css("background","#0AA6E8");
-    $(this).css("background","#CD1BE8");
+$(".left .kuai").css("background","#E7C07B").click(function () {
+    $(".left .kuai").css("background","#E7C07B");
+    $(this).css("background","#AF7E46");
     $(".tian").slideUp(500);
     var index=$(this).index();
     $(".right .item").slideUp(500).eq(index).slideDown(500);

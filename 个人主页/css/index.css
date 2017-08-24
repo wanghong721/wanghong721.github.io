@@ -1,4 +1,4 @@
-html,body{
+html,body,ul,li{
     margin: 0;
     padding: 0;
     list-style: none;
@@ -21,7 +21,7 @@ html,body{
     position:absolute;
     top:50%;
     margin-top:-100px;
-    left:650px;
+    left:50%;
     display:none;
     z-index: 120;
 }
@@ -30,7 +30,7 @@ html,body{
     height:200px;
     /*background:red;*/
     position:absolute;
-    right:650px;
+    right:45%;
     display:none;
     top:50%;
     margin-top:-100px;
@@ -225,6 +225,15 @@ canvas{
     background:url("../img/3.jpg");
     background-size: cover;
     overflow:hidden;
+    position: relative;
+}
+.box7{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+    background: rgba(169, 167, 181, 0.39);
 }
 .box img{
     width: 200px;
@@ -268,11 +277,142 @@ canvas{
 .box{
     background: #de6a50;
 }
+.box a{
+    text-decoration: none;
+}
 .box7 h2{
     font-size: 40px;
     color: black;
 }
 .four{
-    background: url("../img/2.jpg") center;
+    /*background: url("../img/2.jpg") center;*/
+    /*background-size: cover;*/
+}
+#bb-bookblock{
+    background: red;
+}
+.bb-item{
+    background: yellow;
+    width: 100%;
+    height: 100%;
+}
+.four{
+    position: relative;
+    background: #C6E0E4;
+}
+
+.box8{
+    width: 100%;
+    height: 50%;
+    background: url("../img/2.jpg");
     background-size: cover;
+    margin-top: -330px;
+}
+.box10{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 10%;
+    /*background: rgba(200, 202, 198, 0.84);*/
+    /*display: none;*/
+}
+.box10 span{
+    text-align: center;
+    line-height: 100px;
+    color: #222932;
+    font-size: 36px;
+}
+.box9{
+    position: absolute;
+    left: 70px;
+    top: 30%;
+    width: 1200px;
+    height: 50%;
+    background:white;
+    z-index: 500;
+}
+.box16{
+    width: 580px;
+    height: 100%;
+    margin-left: 20px;
+    /*background: yellow;*/
+    float: left;
+    border-right: 1px solid #CCC;
+}
+.box16 ul li{
+    width: 500px;
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+    margin-left: 15px;
+    /*background: #ccc;*/
+}
+.box16 ul>li:last-child{
+    border-bottom: 0;
+}
+.box16 ul li img{
+    float: left;
+    margin-top: 25px;
+}
+.box17{
+    float: left;
+    width: 560px;
+    height: 100%;
+    margin-left: 15px;
+}
+.box17 ul li{
+    height:82px;
+    border-bottom: 1px solid #ccc;
+}
+.box17 ul li span{
+    /*color: #ccc;*/
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    /*text-align: left;*/
+    /*margin-left: 50px;*/
+}
+.box17 ul li input{
+    /*margin-left: -150px;*/
+    width: 480px;
+    margin-top: 15px;
+}
+.input{
+    background: #EB4346;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.zuo{
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 11px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.you{
+    float: right;
+    height: 70px;
+    width: 400px;
+}
+.you span{
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.you>span:last-child{
+    font-size: 14px;
 }

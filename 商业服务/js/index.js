@@ -1,3 +1,8 @@
+window.onload=function(){
+    $('.box1').addClass('leftIn');
+    $('.box2').addClass('rightIn');
+    $('.box3').addClass('upIn');
+}
 $("#main").fullpage({
     anchors:["p1","p2","p3","p4","p5","p6"],
     scrollingSpeed:"700",

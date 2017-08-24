@@ -50,7 +50,6 @@
     Tween.Linear     
 	Tween.Quad.easeIn
 */
-
  Tween = {  
     Linear: function(t,b,c,d){ return c*t/d+b; },
     Quad: {
@@ -195,7 +194,13 @@
         }
     }
  }
+
+
+
  /*
+
+400   
+
    动画函数 animate (obj,attrObj,dur,fun,callback)
    obj   要动画的对象
    attrobj   要动画的属性对象{width:xxxx,height:xxx,left:xxxx,top:xxxx,opacity:xxx}
@@ -203,7 +208,7 @@
    fun   动画方式
    callback 回调函数 
    */
-  //fun  用来控制动画方式
+  
 function animate (obj,attrObj,dur,fun,callback) {
 	clearInterval(obj.t);
 	if(arguments.length==2){
@@ -226,8 +231,7 @@ function animate (obj,attrObj,dur,fun,callback) {
 			  fun=Tween.Linear;
 			  callback=dur;
 			  dur=500;
-		}
-	  
+		  }
 	  }
 	}
 	if(arguments.length==4){
@@ -249,12 +253,11 @@ function animate (obj,attrObj,dur,fun,callback) {
 				  dur=500
 	  }
 	}
-  
   var time=0;
 	var start={};
   var change={};
   for (var i in attrObj) {
-    start[i]=setCss(obj,i);//getStyle() 
+    start[i]=setCss(obj,i);
     change[i]=attrObj[i]-start[i];
   }
 
@@ -290,7 +293,7 @@ function animate (obj,attrObj,dur,fun,callback) {
        //位置和尺寸
       if(attr=="height"||attr=="width"||attr=="top"||attr=="left"||attr=="right"|| attr=="bottom"){
         var val=obj.currentStyle?parseInt(obj.currentStyle[attr]):parseInt(getComputedStyle(obj,null)[attr]);
-        if(val==undefined){
+        if(!val){
           var str="offset"+attr.replace(attr.charAt(0),attr.charAt(0).toUpperCase());
           val=obj[str];
         }

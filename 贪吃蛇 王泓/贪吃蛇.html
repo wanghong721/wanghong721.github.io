@@ -14,7 +14,7 @@
         .left {
             width: 600px;
             height: 600px;
-            background: red;
+            /*background: red;*/
             float: left;
         }
 
@@ -238,14 +238,6 @@
         });
         $("#" + snackHead.x + "-" + snackHead.y).addClass("snackhead");
        let scor = $("#scor").html(snackArr.length-3);
-        let num=1;
-        function state() {
-            if(scor%2==0){
-                num++;
-            }
-            return num;
-            $("#stste").html(num);
-        };
         state();
     };
     drawSnack();
