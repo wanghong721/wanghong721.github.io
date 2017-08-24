@@ -1,0 +1,1196 @@
+body,ul,dl{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #F5F5F5;
+}
+.fix{
+    width: 0;
+    height: 0;
+    position: fixed;
+    left: calc(50% - 670px);
+    top: 40%;
+    background: red;
+    transition: all 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+}
+.fix ul{
+    width: 100%;
+    height: 100%;
+}
+.fix ul>li:first-child{
+    height: 20px;
+    background: #FF0036;
+    text-align: center;
+    border-top: 1px solid white;
+    font-size: 12px;
+    color: white;
+}
+.fix ul>li:last-child{
+    height: 20px;
+    background: #ACACAC;
+    text-align: center;
+    border-top: 1px solid white;
+    font-size: 12px;
+    color: white;
+}
+.fix ul .one:hover{
+    background: red;
+}
+.fix ul .two:hover{
+    background: #EA5F8D;
+}
+.fix ul .three:hover{
+    background: #0AA6E8;
+}
+.fix ul .four:hover{
+    background: #64C333;
+}
+.fix ul .five:hover{
+    background: #F15453;
+}
+.fix ul .six:hover{
+    background: #19C8A9;
+}
+.fix ul .seven:hover{
+    background: #F7A945;
+}
+.fix ul .eight:hover{
+    background: #FF0036;
+}
+.fix ul .active{
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    border-top: 1px solid white;
+    font-size: 12px;
+    background: #626262;
+    color: white;
+}
+.fix ul .active span{
+    width: 24px;
+    height: 12px;
+    display: block;
+    margin: 0 6px;
+}
+.cang{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background: #E22B31;
+    z-index: 5;
+    transition: all 0.5s;
+    top:-52px;
+    left: 0;
+}
+.cang .con{
+    width: 1260px;
+    height: 48px;
+    margin: 0 auto;
+    border: 1px solid #E22B31;
+}
+.cang .con .nei{
+    width: 740px;
+    height: 32px;
+    margin: 9px auto;
+}
+.cang .con .nei .biao{
+    width: 650px;
+    height: 28px;
+    border: 1px solid #E22B31;
+    float: left;
+}
+.cang .con .nei .que{
+    width: 88px;
+    height: 32px;
+    background: #FF0036;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+                               /*头部开始*/
+.header{
+    width: 100%;
+    height: 33px;
+    background: #F2F2F2;
+}
+.header .con{
+    width: 1230px;
+    height: 100%;
+    margin: 0 auto;
+    color: #999999;
+    font-size: 14px;
+}
+.header .con .left{
+    width: 218px;
+    height: 100%;
+    float: left;
+    line-height: 33px;
+    float: left;
+}
+.header .con .left li{
+    float: left;
+    margin-right: 10px;
+}
+.header .con .left li a{
+    color: #999999;
+}
+.header .con .left li a:hover{
+    color:#FF0036;
+}
+.header .con .left>li:last-child{
+    margin-right: 0;
+}
+.header .con .right{
+    width: 680px;
+    height: 100%;
+    float: right;
+}
+.header .con .right li{
+    float: left;
+    line-height: 33px;
+    margin-right: 12px;
+}
+.header .con .right>li:last-child{
+    margin-right: 0;
+}
+.header .con .right li a{
+    color: #999999;
+}
+.header .con .right li .sp>span:first-child{
+    color:#FF0036;
+}
+.header .con .right li a:hover{
+    color: #FF0036;
+}
+.header .con .right .wh:hover{
+    text-decoration: underline;
+    background: white;
+    position: relative;
+}
+
+.header .con .right li a .te{
+    color: black;
+    font-size: 12px;
+}
+
+.header .con .right .wh:hover .fa{
+    display: block;
+}
+
+.header .con .fa{
+    width: 80px;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+    position: absolute;
+    display: none;
+    background: white;
+    border: 1px solid white;
+    border-top: 0;
+}
+.header .con .fa span{
+    display: block;
+}
+#num3{
+    width: 80px;
+    top: 100%;
+    right: 0;
+    font-size: 12px;
+}
+#num4{
+    width: 180px;
+    top: 100%;
+    right: 0;
+    font-size: 12px;
+}
+.header .con .fa a:hover{
+    text-decoration: underline;
+}
+
+                                                    /*头部开始*/
+                                                    /*搜索开始*/
+.search{
+    height: 130px;
+    border: 1px solid white;
+}
+.search .img{
+    width: 240px;
+    float: left;
+    margin-left: 50px;
+}
+.search .img img{
+    width: 230px;
+}
+.search .right{
+    width: 625px;
+    height: 60px;
+    margin-left: 120px;
+    float: left;
+    margin-top: 40px;
+    /*border: 1px solid white;*/
+}
+.search .right .top{
+    width: 100%;
+    height: 40px;
+}
+.search .right .top .input{
+    float: left;
+}
+.search .right .top .que{
+    float: left;
+}
+.search .right .top input{
+    width: 491px;
+    height: 36px;
+    border: 2px solid #FF0036;
+    border-right: 0;
+    line-height: 36px;
+    font-size: 16px;
+    color:#000;
+}
+.search .right .top .que{
+    width: 130px;
+    height: 38px;
+    border: 2px solid #FF0036;
+    border-left: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: #FF0036;
+    line-height: 36px;
+    text-align: center;
+}
+.search .right .under{
+    width: 600px;
+    height: 22px;
+}
+.search .right .under .nine{
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+.search .right .under .nine li{
+    float: left;
+    font-size: 14px;
+    line-height: 22px;
+    color: #999;
+}
+.search .right .under .nine li a{
+    display: block;
+    color: #999;
+    float: left;
+}
+.search .right .under .nine li .red{
+    color: #FF0036;
+}
+.search .right .under .nine li span{
+    display: block;
+    margin-left:12px;
+    float: left;
+}
+                                                /*搜索结束*/
+                                                /*导航开始*/
+.dao{
+    width: 100%;
+    height: 36px;
+    background: #FF0036;
+}
+.dao .con{
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+}
+.dao .con .left{
+    width: 200px;
+    height: 100%;
+    line-height: 36px;
+    background: #E22127;
+    color: white;
+    font-size: 16px;
+    float: left;
+    text-align: center;
+}
+.dao .con .right{
+    float: right;
+}
+.dao .con .right .nei{
+    width: 1060px;
+    height: 36px;
+}
+.dao .con .right .nei li{
+    float: left;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    margin-right:6px;
+    position: relative;
+}
+.dao .con .right .nei .num1{
+    width: 120px;
+    height: 100%;
+}
+.dao .con .right .nei .num1 a{
+    display: block;
+    width: 90px;
+    height: 100%;
+    margin: 0 auto;
+}
+.dao .con .right .nei .num1 a img{
+    width: 90px;
+    height: 36px;
+}
+.dao .con .right .nei li .active{
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    transition: all 1s;
+    opacity: 0;
+}
+.dao .con .right .nei li .act{
+    opacity: 1;
+}
+.dao .con .right .nei .num2{
+    width: 94px;
+    height: 100%;
+}
+.dao .con .right .nei .num2 a{
+    display: block;
+    height: 100%;
+    color:white;
+}
+.dao .con .right .nei .num3{
+    width: 78px;
+    height: 100%;
+}
+.dao .con .right .nei .num3 a{
+    display: block;
+    height: 100%;
+    color:white;
+}
+                                                             /*导航结束*/
+                                                             /*banner开始*/
+.banner{
+    width: 100%;
+    height: 500px;
+    background: #E8E8E8;
+}
+.banner .con{
+    width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+}
+.banner .con .left{
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+.banner .con .left ul{
+    width: 200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.banner .con .left ul li{
+    width: 100%;
+    background: #EEEBE7;
+    font-size: 14px;
+    height: 6.25%;
+}
+.banner .con .left ul li a{
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    color:black;
+    line-height: 31px;
+    background: #EEEBE7;
+    height: 100%;
+}
+.banner .con .left ul li a:hover{
+    background: white;
+    color:#FF0036;
+}
+.banner .con .left ul li a span{
+    float: left;
+    margin-left: 8px;
+}
+.banner .con .left ul li a>span:first-child{
+    margin-left: 15px;
+}
+.banner .con .right{
+    width: 1060px;
+    height: 100%;
+    float: left;
+    position:relative;
+}
+.banner .con .right .tu{
+    width: 1060px;
+    height: 500px;
+    position: relative;
+}
+.banner .con .right .tu li{
+    width: 1060px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.banner .con .right .tu .act{
+    opacity: 1;
+    z-index: 2;
+}
+.banner .con .right .tu li img{
+    width: 1060px;
+    height: 500px;
+}
+.banner .con .right .dian{
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    margin: -10px -100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.banner .con .right .dian .active{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(169,169,169,0.5);
+}
+.banner .con .right .dian .ac{
+    background: #FF0036;
+    z-index: 2;
+}
+                                                      /*banner结束*/
+                                                        /*hot开始*/
+.hot{
+    width: 1260px;
+    height: 436px;
+    margin: 60px auto;
+    border: 1px solid #F5F5F5;
+}
+.hot .left{
+    width: 488px;
+    height: 100%;
+    background: #050505;
+    float: left;
+}
+.hot .left .top{
+    width: 100%;
+    height: 275px;
+    position: relative;
+}
+.hot .left .top ul{
+    width: 100%;
+    height: 275px;
+}
+.hot .left .top ul .big{
+    width: 100%;
+    height: 275px;
+    position: absolute;
+}
+.hot .left .top img{
+    width: 100%;
+    height: 275px;
+}
+.hot .left .top .shang{
+    width: 61px;
+    height: 20px;
+    border-radius: 10px;
+    background: black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    line-height: 20px;
+}
+.hot .left .top .shang .yuan{
+    width: 8px;
+    height: 8px;
+    background: #FF0036;
+    border-radius: 50%;
+    margin: 6px 6px;
+    float: left;
+}
+.hot .left .top .shang span{
+    font-size: 12px;
+    color: white;
+    margin-top: 2px;
+}
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.hot .left .top .zhong{
+    width: 70px;
+    height: 57px;
+    position: relative;
+    top: -50%;
+    left: 50%;
+    margin-top: -28px;
+    margin-left: -35px;
+}
+.hot .left .top .zhong a img{
+    width: 70px;
+    height: 57px;
+}
+.hot .left .top ul a .active{
+    animation: scale 0.8s;
+}
+.hot .left .top .zhong a .active{
+    animation: scale 0.8s;
+}
+.hot .left .top .xia{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    top: -35%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+.hot .left .top .xia span{
+    font-size: 24px;
+    color:white;
+}
+.hot .left .top .xia .sp span{
+    font-size: 16px;
+}
+.hot .left .center{
+    width: 486px;
+    height: 90px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+}
+.hot .left .center ul{
+    width: 972px;
+    transition: all 2s;
+}
+.hot .left .center .small{
+    float: left;
+    width: 160px;
+    height: 90px;
+    position: relative;
+    margin-right: 2px;
+}
+.hot .left .center li .none{
+    width: 100%;
+    height: 90px;
+    display: block;
+}
+.hot .left .center li .none img{
+    width: 160px;
+    height: 90px;
+}
+.hot .left .center li .none .mask{
+    position: absolute;
+    width: 160px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.hot .left .center li .none .mask img{
+    width: 36px;
+    height: 30px;
+    margin: 30px 62px;
+    animation: scale 0.8s;
+}
+.hot .left .center .jian1{
+    width: 15px;
+    height: 90px;
+    left: 0;
+    top: 0;
+    background: url("../img/21.png");
+    position: absolute;
+}
+.hot .left .center .jian2{
+    width: 20px;
+    height: 90px;
+    top:0;
+    background: url("../img/20.png");
+    right: 0;
+    position: absolute;
+}
+.hot .left .under{
+    width: 390px;
+    height: 40px;
+    margin:10px 20px ;
+}
+.hot .left .under .zuo{
+    width: 81px;
+    height: 31px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.hot .left .under .zuo img{
+    float: left;
+    height: 30px;
+}
+.hot .left .under .you{
+    color: white;
+}
+.hot .right{
+    width: 770px;
+    height: 100%;
+    float: right;
+}
+.hot .right ul{
+    width: 100%;
+    height: 108px;
+    margin-bottom: 1px;
+}
+.hot .right ul li{
+    width: 126px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background: white;
+    border: 1px solid #F5F5F5;
+}
+.hot .right ul>li:first-child{
+    margin-left: 0;
+}
+/*.hot .right ul li:hover .xian{*/
+    /*display: block;*/
+/*}*/
+.hot .right ul li .con{
+    height: 90px;
+}
+.hot .right ul li .con img{
+    width: 90px;
+    height: 50px;
+    margin: 20px 15px;
+}
+.hot .right ul li .xian{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.hot .right ul li .xian a>span:first-child{
+    font-size: 12px;
+    color: #e40077;
+    margin-top: 8px;
+    margin-left: 90px;
+}
+.hot .right ul li .xian .zi{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    display: block;
+    color: white;
+}
+.hot .right ul li .xian .xi{
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    background: #e40077;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    margin: 15px auto;
+}
+                                                  /*hot结束*/
+                                                  /*next开始*/
+.next{
+    width: 1260px;
+    height: 477px;
+    border: 1px solid white;
+    margin: 15px auto;
+}
+.next .top{
+    width: 100%;
+    height: 36px;
+}
+.next .top li{
+    width: 238px;
+    float: left;
+    margin-left: 17px;
+    height: 100%;
+    line-height: 36px;
+    text-align: center;
+    background: #FF0036;
+}
+.next .top ul>li:first-child{
+    margin-left: 0;
+}
+.next .top li span{
+    font-size: 18px;
+    color: white;
+}
+.next>.center:last-child{
+    margin-top: 2px;
+}
+.next .center{
+    width: 100%;
+    height: 220px;
+}
+.next .center li{
+    width: 238px;
+    float: left;
+    margin-left: 17px;
+    height: 220px;
+    text-align: center;
+    background: white;
+}
+.next .center ul>li:first-child{
+    margin-left: 0;
+}
+.next .center li>span:first-child{
+    font-size: 24px;
+    margin-top:10px ;
+    color: black;
+    display: block;
+}
+.next .center li>span:nth-child(2){
+    font-size: 14px;
+    margin-top: 10px;
+    color: #8896B8;
+    display: block;
+}
+.next .center li .tu{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #F7F7F7;
+    margin: 10px auto;
+}
+.next .center li .tu img{
+    height: 120px;
+    width: 120px;
+}
+.next .center li:hover img{
+    width: 140px;
+    height: 140px;
+}
+                                      /*next结束*/
+.gif{
+    width: 1260px;
+    height: 90px;
+    margin: 0 auto;
+    background-image: url("../img/7.jpg");
+}
+
+                                       /*then开始*/
+.then{
+    width: 1260px;
+    height: 470px;
+    margin: 30px auto;
+}
+.then .top{
+    width: 100%;
+    height: 31px;
+}
+.then .top .left{
+    width: 250px;
+    float: left;
+    height: 100%;
+    line-height: 31px;
+}
+.then .top .left .fang{
+    width: 5px;
+    height: 100%;
+    float: left;
+    background: #EA5F8D;
+}
+.then .top .left span{
+    margin-left: 15px;
+    color: black;
+    font-size: 18px;
+    float: left;
+}
+.then .top .left>span:last-child{
+    font-size: 14px;
+}
+.then .top .right{
+    width: 590px;
+    height: 31px;
+    float: right;
+}
+.then .top .right ul>li:first-child{
+    margin-left: 0;
+}
+.then .top .right li{
+    float: left;
+    margin-left: 18px;
+}
+.then .top .right li a{
+    line-height: 31px;
+    font-size: 16px;
+    text-align: center;
+    color: black;
+}
+.then .top .right li a:hover{
+    text-decoration: underline;
+}
+.then .under{
+    width: 100%;
+    height: 440px;
+}
+.then .under .left{
+    width: 250px;
+    height: 439px;
+    float: left;
+    transition: all 2s;
+}
+.then .under .left .shang{
+    width: 100%;
+    height: 300px;
+}
+.then .under .left .shang img{
+    width: 250px;
+    height: 300px;
+}
+.then .under .left .zhong{
+    width: 100%;
+    height: 30px;
+    background: #D7E8FB;
+    text-align: center;
+}
+.then .under .left .zhong span{
+    line-height: 30px;
+    font-size: 16px;
+    color: black;
+}
+.then .under .left .xia{
+    width: 100%;
+    height: 108px;
+    background: #EA5F8D;
+    line-height: 30px;
+    border: 1px solid #EA5F8D;
+    text-align: center;
+}
+.then .under .left .xia span{
+    margin-top: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+}
+.then .under .left .xia img{
+    height: 30px;
+}
+.then .under .left .xia>span:nth-child(2){
+    font-size: 16px;
+}
+.then .under .left:hover .zhong span{
+    color: #EA5F8D;
+}
+.then .under .right{
+    width: 1010px;
+    height: 100%;
+    float: right;
+}
+.then .under .right .zuo{
+    width: 760px;
+    height: 100%;
+    float: left;
+}
+.then .under .right .zuo ul{
+    height: 220px;
+    width: 100%;
+}
+.then .under .right .zuo>ul:last-child{
+    margin-top: 2px;
+}
+.then .under .right .zuo li{
+    width: 251px;
+    float: left;
+    background: white;
+    height: 220px;
+    border: 1px solid #F5F5F5;
+}
+.then .under .right .zuo li span{
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+}
+.then .under .right .zuo li>span:nth-child(2){
+    font-size: 14px;
+    color: #e40077;
+}
+.then .under .right .zuo li img{
+    width: 154px;
+    height: 154px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.then .under .right .zuo li:hover img{
+    margin-right: 30px;
+}
+.then .under .right .you{
+    width: 250px;
+    height: 100%;
+    background: white;
+    float: right;
+}
+.then .under .right .you ul{
+    height:439px;
+}
+.then .under .right .you li{
+    width:250px;
+    height: 146px;
+    background: white;
+    border: 1px solid #F5F5F5;
+    border-left: 0;
+}
+.then .under .right .you li span{
+    display: block;
+    margin-top: 3px;
+    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+}
+.then .under .right .you li>span:nth-child(2){
+    font-size: 14px;
+    color: #e40077;
+}
+.then .under .right .you li img{
+    width: 85px;
+    height: 85px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.then .under .right .you li:hover img{
+    margin-right: 30px;
+}
+                                    /*then结束*/
+                                    /*like开始*/
+.like{
+    width: 1260px;
+    margin: 0 auto;
+}
+.like .top{
+    width: 180px;
+   height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 1px solid #F5F5F5;
+    margin: 0 auto;
+}
+.like .top .xian{
+    width: 30px;
+    margin-top: 49px;
+    height: 2px;
+    background: #979797;
+    float: left;
+}
+.like .top span{
+    display: block;
+    float: left;
+    margin-left: 13px;
+    font-size: 18px;
+    color:#e40077;
+}
+.like .top>span:last-of-type{
+    margin-right:13px;
+    margin-left: 2px;
+    color: #979797;
+}
+.like .shopping{
+    width: 100%;
+}
+.like .shopping ul{
+    width: 100%;
+    height: 333px;
+    border: 1px solid #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+}
+.like .shopping ul li{
+    width: 239px;
+    height: 332px;
+    border: 1px solid #F5F5F5;
+    background: white;
+    float: left;
+    position: relative;
+}
+.like .shopping ul li img{
+    width: 235px;
+    height: 235px;
+    margin: 0 auto;
+}
+.like .shopping ul li span{
+    font-size: 13px;
+    line-height: 18px;
+    color: #666;
+    display: block;
+}
+.like .shopping ul li h5{
+    color: #ff0036;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.like .shopping ul li .mask{
+    width: 239px;
+    height: 332px;
+    border: 1px solid #ff0036;
+    background: rgba(230,230,230,0.5);
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.like .last{
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+}
+.like .last img{
+    width: 80px;
+    height: 45px;
+    margin: 0 590px;
+}
+                          /*like结束*/
+                           /*end开始*/
+.end{
+    width: 100%;
+    height: 365px;
+    background: white;
+    margin-top: 5px;
+}
+.end .con{
+     width: 1260px;
+    margin: 0 auto;
+}
+.end .con .top{
+    height: 150px;
+    border: 1px solid white;
+}
+.end .con .top .nei{
+    width: 1200px;
+    height: 100px;
+    margin:25px 30px;
+    border: 1px solid white;
+    position: relative;
+}
+.end .con .top .nei img{
+    width: 100%;
+}
+.end .con .top .nei ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.end .con .top .nei ul li{
+    float: left;
+}
+.end .con .top .nei ul li a{
+    width: 300px;
+    height: 100px;
+    display: block;
+}
+.end .con .bottom{
+    width: 1200px;
+    height: 210px;
+    border-top: 1px solid #F5F5F5;
+    margin: 0 auto;
+}
+.end .con .bottom .nei{
+    height: 170px;
+    margin-top: 30px;
+}
+.end .con .bottom .nei .da{
+    width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.end .con .bottom .nei .da .fen .xiao .f span{
+    color: #646464;
+    font-size: 16px;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+}
+.end .con .bottom .nei .da .fen .xiao .f a{
+    font-size: 12px;
+    text-align: left;
+    height: 20px;
+    line-height: 20px;
+    color: #8b8b8b;
+}
+                                         /*end结束*/
+                                         /*list开始*/
+.list{
+    width: 100%;
+    height: 181px;
+    background: black;
+    border-top: 2px solid #FF0439;
+}
+.list .con{
+    width: 1260px;
+    height: 170px;
+    margin: 10px auto;
+}
+.list .con ul{
+    height: 35px;
+}
+.list .con ul li{
+    float: left;
+    margin-right: 5px;
+    color: white;
+    font-size: 12px;
+}
+.list .con ul li a{
+    color:white;
+    line-height: 35px;
+    font-size: 12px;
+}
+.list .con ul li a span{
+    line-height: 35px;
+    font-size: 12px;
+    margin-left: 5px;
+    color: white;
+}
+
+
+
+

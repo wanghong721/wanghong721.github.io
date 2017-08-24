@@ -9,6 +9,7 @@ html,body{
 .first{
     position: relative;
     background: url("../img/9.jpg");
+    background-size: cover;
     font-size: 36px;
     text-align: center;
     color: white;
@@ -22,6 +23,7 @@ html,body{
     margin-top:-100px;
     left:650px;
     display:none;
+    z-index: 120;
 }
 .box2{
     width:400px;
@@ -32,6 +34,27 @@ html,body{
     display:none;
     top:50%;
     margin-top:-100px;
+    z-index: 120;
+}
+.box3{
+    width:800px;
+    height:230px;
+    /*background:red;*/
+    position:absolute;
+    right:0;
+    left: 0;
+    display:none;
+    top:30%;
+    margin: auto;
+    background: rgba(149,149,149,0.5);
+}
+.box3 span{
+    margin-top: 100px;
+    display: block;
+    color: white;
+}
+.box3>span:last-child{
+    margin-top: 20px;
 }
 @keyframes leftIn {
     0%{
@@ -81,18 +104,175 @@ html,body{
     animation: reftOut .3s ease-in forwards;
     display:block;
 }
-.num1{
-    background: url(../img/5.jpg);
+@keyframes upIn {
+    0%{
+        transform: translate3d(0,1000px,0);
+    }
+    100%{
+        transform: translate3d(0,0,0);
+    }
+}
+.upIn{
+    animation: upIn 1s ease-in;
+    display:block;
+}
+@keyframes upOut{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(0,-1000px,0);
+    }
+}
+.upOut{
+    animation: upOut .3s ease-in forwards;
+    display:block;
+}
+.second{
+    background: url("../img/8.jpg");
     background-size: cover;
+    position: relative;
+}
+.box4{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.72);
+    z-index: 20;
+}
+.num1{
+    width: 300px;
+    height: 200px;
+    border-radius: 30%;
+    background: red;
+    /*margin: -200px 160px;*/
+    background: url("../img/1.png") center;
+    background-size: cover;
+    z-index: 999;
+    position: relative;
+    left: 160px;
+    top:100px;
+    /*display: none;*/
 }
 .num2{
-    background: url(../img/7.jpg);
-    background-size: cover;
+    width: 300px;
+    height: 230px;
+    /*background: rgba(17, 36, 181, 0.09);*/
+    /*margin: 300px 200px;*/
+    position: absolute;
+    left: 160px;
+    top: 335px;
+    color: white;
+    /*display: none;*/
 }
-.num3{
-    background: url(../img/10.jpg);
-    background-size: cover;
+.num2 span{
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
 }
-.jie{
-    z-index: 999;
+.box5{
+    /*background: #000;*/
+    height: 200px;
+    width: 700px;
+    margin: 0 auto;
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+.box6{
+    width: 700px;
+    height: 50px;
+    position: absolute;
+    right: 100px;
+    bottom: 300px;
+    color: white;
+}
+.box6 span{
+    display: block;
+    float: left;
+    line-height: 50px;
+    font-size: 36px;
+    text-align: center;
+    width: 200px;
+    margin-left: 50px;
+    /*background: red;*/
+}
+.box6>span:first-child{
+    margin-left: 0;
+}
+.box5>canvas:first-child{
+    margin-left: 0;
+}
+canvas{
+    display: block;
+    float: left;
+    margin-left: 50px;
+    color: white;
+    /*background: rgba(204, 204, 204, 0.31);*/
+}
+.pic{
+    width: 200px;
+    height: 260px;
+    margin: 150px auto 0;
+    position: relative;
+    /*transform 旋转元素*/
+    transform-style:preserve-3d;
+    transform:perspective(800px) rotateX(-10deg) rotateY(0deg);
+}
+.three{
+    background:url("../img/3.jpg");
+    background-size: cover;
+    overflow:hidden;
+}
+.box img{
+    width: 200px;
+    height: 200px;
+}
+.box span{
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    color: white;
+}
+.box a>span:last-child{
+    font-size: 12px;
+    line-height: 30px;
+    color: rgb(205, 231, 236);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.pic .box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #fff;
+    /*倒影的设置*/
+    -webkit-box-reflect:below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 50%,rgba(0,0,0,.5) 100%);
+    user-select: none;
+}
+.pic p{
+    width: 1200px;
+    height: 1200px;
+    background: -webkit-radial-gradient(center center,600px 600px,rgba(255,255,255,.5),rgba(0,0,0,0));
+    position: absolute;
+    top:100%;left:50%;
+    margin-top: -600px;
+    margin-left: -600px;
+    border-radius:600px;
+    transform:rotateX(90deg);
+}
+.box{
+    background: #de6a50;
+}
+.box7 h2{
+    font-size: 40px;
+    color: black;
+}
+.four{
+    background: url("../img/2.jpg") center;
+    background-size: cover;
 }

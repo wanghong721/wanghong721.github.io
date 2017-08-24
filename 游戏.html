@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+        .main{
+            width: 1000px;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .main .img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000px;
+            height: 100%;
+        }
+        .main .img img{
+            width: 100%;
+            height: 100%;
+        }
+        .left{
+            width: 800px;
+            height: 100%;
+            float: left;
+            position: relative;
+        }
+        .right{
+            width: 200px;
+            height: 100%;
+            background: rgba(225,115,167,0.5);
+            float: left;
+            position: relative;
+            user-select: none;
+        }
+        .show{
+            width: 100px;
+            height: 40px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+        }
+        .show .title{
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+            /*background: pink;*/
+        }
+        .show .con{
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: white;
+            color: red;
+        }
+        .btn{
+            width: 180px;
+            height: 30px;
+            background: #fff;
+            color: #333;
+            text-align: center;
+            line-height: 30px;
+            margin: 30px auto;
+            cursor: pointer;
+            user-select: none;
+            position: absolute;
+            left: 50%;
+            margin: -90px;
+            top: 320px;
+        }
+        .btn:hover{
+            box-shadow: 0 0 10px #F5F221;
+            width: 200px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 20px;
+            margin-left: -100px;
+        }
+        .btnn{
+            width: 180px;
+            height: 30px;
+            background: #fff;
+            color: #333;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            /*margin: 30px auto;*/
+            cursor: pointer;
+            user-select: none;
+            left: 50%;
+            margin: -90px;
+            top: 380px;
+        }
+        .btnn:hover{
+            box-shadow: 0 0 10px #F5F221;
+            /*margin-top: 25px;*/
+            width: 200px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 20px;
+            margin-left: -100px;
+        }
+        .letter{
+            width: 80px;
+            height: 80px;
+            border: 1px solid red;
+            line-height: 80px;
+            text-align: center;
+            position: absolute;
+            font-size: 50px;
+            font-weight: 500;
+            color: yellow;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="img">
+        <img src="贪吃蛇%20王泓/img/6.jpg" alt="">
+    </div>
+    <div class="left"></div>
+    <div class="right">
+        <div class="show">
+            <div class="title">得分</div>
+            <div class="con" id="scor">0</div>
+        </div>
+        <div class="show">
+            <div class="title">关卡</div>
+            <div class="con" id="state">1</div>
+        </div>
+        <div class="show">
+            <div class="title">生命</div>
+            <div class="con">3</div>
+        </div>
+        <div class="btn" id="start">
+            开始
+        </div>
+        <div class="btnn">
+            暂停
+        </div>
+    </div>
+</div>
+</body>
+<script>
+//    function Fn() {
+//        this.time=100;
+//    }
+//    Fn.prototype
+{
+    class Game{
+        constructor(left,scor){
+            this.left=left;
+//            console.log(left);
+            this.num=3;
+            this.obj={};
+            this.scor=scor;
+//            this.state=;
+            this.scornum=0;
+            this.statenum=1;
+            this.speed=5;
+            this.life=5;
+        }
+        start() {
+            for(let i=0;i<this.num;i++){
+                this._createLetter();
+                this._move();
+                this._keydown();
+            }
+        }
+        _createLetter() {
+            let newdiv=document.createElement('div');
+            newdiv.className="letter";
+            do{
+            let randomNum=Math.floor(Math.random()*26)+65;
+            var randomLetter=String.fromCharCode(randomNum);
+            }while(this.obj[randomLetter]);
+            do{
+            var randomLeft=Math.random() *720;
+            }while(this._checkLeft(randomLeft));
+            let randomTop=Math.random() * 50;
+            this.obj[randomLetter]={left:randomLeft,ele:newdiv};
+            newdiv.style.left=randomLeft + "px";
+            newdiv.style.top=randomTop + "px";
+            newdiv.innerHTML=randomLetter;
+            this.left.appendChild(newdiv);
+
+        }
+        _checkLeft(left){
+            for(let i in this.obj){
+                if(left>this.obj[i].left-80&&left<this.obj[i].left+80){
+                    return true;
+                }
+            }
+        }
+        _move(){
+            setInterval(function () {
+                for(let i in this.obj){
+                    let top=this.obj[i].ele.offsetTop;
+                    top+=this.speed;
+                    this.obj[i].ele.style.top=top+"px";
+                }
+            }.bind(this),300)
+        }
+        _keydown(){
+            document.onkeydown=function (e) {
+                let kc=e.keyCode;
+                let letter=String.fromCharCode(kc);
+                if(this.obj[letter]){
+                    this.left.removeChild(this.obj[letter].ele);
+                    delete this.obj[letter];
+                    this._createLetter();
+                    this.scornum++;
+                    this.scor.innerHtml=this.scornum;
+                    if(this.scornum%10===0){
+                        this._upstate;
+                    }
+                }
+            }.bind(this);
+        }
+        _upstate(){
+            this.statenum++;
+            this.state.innerHTML=this.state;
+            if(this.state<=3){
+                this._createLetter();
+            }else{
+                this.speed++;
+            }
+        }
+        _gameover(){
+        alert("游戏结束");
+            clearInterval(this.st);
+            this.flag=true;
+    }
+    }
+    let left=document.querySelector(".left");
+//    console.log(left);
+    let game=new Game(left);
+    let startbtn=document.querySelector("#start");
+    let scor=document.querySelector("#scor");
+    let state=document.querySelector("#state");
+    let flag=true;
+    startbtn.onclick=function () {
+        console.log(1);
+        console.log(game);
+        if(flag){
+            flag=false;
+            game.start();
+        }
+    }
+}
+</script>
+</html>

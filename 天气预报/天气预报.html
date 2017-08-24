@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul,li{
+        list-style: none;
+    }
+    .box{
+        width: 600px;
+        /*height: 600px;*/
+        margin: 50px auto;
+        background:#2276C3;
+        position: relative;
+        color: white;
+    }
+    .pos{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 50px;
+    }
+    header{
+        display: block;
+    }
+    bottom{
+        display: block;
+        height: 15px;
+    }
+    .gasd{
+        display: block;
+        float: left;
+    }
+    .gas{
+        width: 100px;
+        background: yellow;
+        height: auto;
+        text-align: center;
+        display: block;
+        float: left;
+        /*height: 50px;*/
+    }
+    main{
+        width: 100%;
+        height: 350px;
+        /*background: blue;*/
+    }
+    main ul{
+        width: 600px;
+        height: 350px;
+        margin-left: -40px;
+    }
+    main ul li{
+        float: left;
+        width: 98px;
+        height: 350px;
+        /*background: green;*/
+        border-left: 1px solid white;
+        box-sizing: border-box;
+    }
+    main ul>li:first-child{
+        border-left: 0;
+    }
+    .first{
+        width: 100%;
+    }
+    li img{
+        width: 90px;
+        height: 90px;
+        margin: 10px 5px;
+    }
+    .first img{
+        width: 100px;
+        height: 90px;
+        margin: 10px 55px;
+        display: block;
+        float: left;
+    }
+
+    .num1{
+        /*width: 100%;*/
+        height: 90px;
+        margin-top: 20px;
+        float: left;
+    }
+    .left{
+        width: 90px;
+        height: 70px;
+        font-size: 60px;
+        /*line-height: 90px;*/
+        text-align: center;
+        /*background: black;*/
+        float: left;
+    }
+    .right{
+        height: 70px;
+        float: left;
+        /*background: yellow;*/
+        font-size: 18px;
+    }
+    .right span{
+        display: block;
+    }
+    .right1{
+        height: 70px;
+        float: left;
+        /*background: yellow;*/
+        font-size: 18px;
+        text-align: center;
+        margin:0 auto;
+    }
+    .right1 span{
+        display: block;
+    }
+    .zuo{
+        float: left;
+    }
+    .you{
+        float: left;
+    }
+    .num2{
+        text-align: center;
+        /*width: 100%;*/
+        height: 100px;
+        /*background: yellow;*/
+        margin-top: 20px;
+    }
+    .num2 span{
+        font-size: 12px;
+        display: block;
+        margin-top: 10px;
+    }
+    .num3{
+        height: 130px;
+        width: 600px;
+        /*background: yellow;*/
+        margin-top: 130px;
+    }
+    .num3 ul{
+        position: relative;
+        height: 130px;
+        width: 600px;
+        /*margin-left: -40px;*/
+    }
+    .num3 .act{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        height: 130px;
+        width: 600px;
+    }
+    .num4{
+        height: 40px;
+        width: 400px;
+        background: blue;
+        margin-top: 10px;
+    }
+    .num4 ul{
+        margin-left: -40px;
+        height: 40px;
+        width: 400px;
+    }
+    .num4 li{
+        display: block;
+        float: left;
+        height: 40px;
+        width: 100px;
+        background: rgba(149,149,149,0.3);
+        line-height: 40px;
+        text-align: center;
+    }
+    .num5{
+        background: yellow;
+    }
+    .num6{
+        background: green;
+    }
+    .num7{
+        background: rgba(150,150,150,0.1);
+    }
+    .num8{
+        background: black;
+    }
+    .num8 li{
+        display: block;
+        float: left;
+        width: 300px;
+        height: 43px;
+        background: yellow;
+        margin-left: -40px;
+        line-height: 43px;
+        font-size: 24px;
+    }
+    .num8 ul>li:nth-child(2){
+        margin-left: 0;
+    }
+    .num8 ul>li:nth-child(4){
+        margin-left: 0;
+    }
+</style>
+<body>
+<div class="box">
+     <header>
+         <top>
+             <span class="date"></span>
+             <span class="day"></span>
+             农历<span class="cdata">六月廿四</span>
+         </top>
+         <bottom>
+             <span class="gasd">实时空气质量：</span>
+             <span class="gas">
+
+             </span>
+         </bottom>
+         <div class="pos">
+             选择省<select name="" id="provinces"></select>
+             选择市<select name="" id="citys"></select>
+         </div>
+     </header>
+    <main>
+        <div class="first">
+            <img alt="" id="">
+            <div class="num1">
+                <div class="left">
+
+                </div>
+                <div class="right">
+                        <span class="shang">
+                            ℃
+                        </span>
+                        <span class="xia">
+                            <span class="zuo">
+
+                            </span>
+                            <span class="you">
+                                (实时)
+                            </span>
+                        </span>
+                </div>
+            </div>
+            <div class="num2">
+                    <span class="wen">
+
+                    </span>
+                    <span class="tian">
+
+                    </span>
+                    <span class="clound">
+
+                    </span>
+            </div>
+        </div>
+        <ul>
+        </ul>
+    </main>
+    <!--<last>-->
+        <!--<div class="num3">-->
+            <!--<ul>-->
+               <!--<li class="act num5">-->
+
+               <!--</li>-->
+                <!--<li class="act num6">-->
+
+                <!--</li>-->
+                <!--<li class="act num7">-->
+                    <!--<canvers width="600px" height="130px">-->
+
+                    <!--</canvers>-->
+                <!--</li>-->
+                <!--<li class="act num8">-->
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<span class="clouth">-->
+                                <!--穿衣：-->
+                            <!--</span>-->
+                            <!--<span class="hot">-->
+                                <!--热-->
+                            <!--</span>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<span class="clean">-->
+                                <!--洗车：-->
+                            <!--</span>-->
+                            <!--<span class="shi">-->
+                                <!--较适宜-->
+                            <!--</span>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<span class="gan">-->
+                                <!--感冒：-->
+                            <!--</span>-->
+                            <!--<span class="cold">-->
+                                <!--少发-->
+                            <!--</span>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<span class="sport">-->
+                                <!--运动：-->
+                            <!--</span>-->
+                            <!--<span class="yun">-->
+                                <!--较适宜-->
+                            <!--</span>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<span class="zi">-->
+                                <!--紫外线强度：-->
+                            <!--</span>-->
+                            <!--<span class="ruo">-->
+                                <!--弱-->
+                            <!--</span>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="num4">-->
+            <!--<ul class="xuan">-->
+                <!--<li>-->
+                   <!--24小时温度-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--风力风向-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--降水量-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--相关指数-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</last>-->
+</div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(".xuan li").css("background","blue").click(function () {
+        $(".xuan li").css("background","blue");
+        $(this).css("background","#25B9FF");
+        var index=$(this).index();
+        $(".num3 .act").css("display","none").eq(index).css("display","block");
+    })
+</script>
+<script>
+    var remote_ip_info = {"ret":1,"start":-1,"end":-1,"country":"\u4e2d\u56fd","province":"\u5c71\u897f","city":"\u592a\u539f","district":"","isp":"","type":"","desc":""};
+    var provinces=[];
+    var citys=[];
+    var data=[];
+    var aqi=[];
+    var hourly=[];
+    var daily=[];
+    $.ajax({
+        url:"http://api.jisuapi.com/weather/city",
+        data:{appkey:"d619560b1645a603"},
+        dataType:"jsonp",
+        success:function (r) {
+            console.log(r);
+            data=r.result;
+            provinces=$.grep(r.result,function (value) {
+                if (value.parentid=="0"){
+                    return true;
+                }
+            });
+            $.each(provinces,function (index,value) {
+                $("<option>").html(value.city).val(value.cityid).appendTo("#provinces");
+            })
+        }
+    });
+    $("#provinces").on("change focus",function () {
+        var id=$(this).val();
+        console.log(id)
+        citys=$.grep(data,function (value) {
+            if(value.parentid==id){
+                return true;
+            }
+        });
+        console.log(citys)
+        $("#citys").empty();
+        $.each(citys,function (index,value) {
+            $("<option>").html(value.city).val(value.city).appendTo("#citys");
+        });
+    });
+    $("#citys").on("change blur",function () {
+        var city = $(this).val();
+        $.ajax({
+            url: "http://api.jisuapi.com/weather/query?appkey=d619560b1645a603&city=" + city,
+//            data:"city:city",
+            dataType: "jsonp",
+            success: function (r) {
+                if (r.status == "0") {
+                    console.log(r);
+                    data = r.result;
+                    aqi = data.aqi;
+                    $(".date").html(data.date);
+                    $(".day").html(data.week);
+                    $(".gas").html(aqi.quality);
+                    $(".first .wen").html(+data.templow + "~" + data.temphigh + "℃");
+                    $(".first .clound").text(r.result.winddirect + r.result.windpower + "风");
+                    $(".first .tian").html(data.weather);
+                    hourly = data.hourly;
+                    daily = data.daily;
+                    var src = "img/weathercn02/" + hourly[0].img + ".png";
+                    $(".first img").attr("src", src);
+                    $(".first .zuo").html(hourly[0].weather);
+                    $(".first .left").html(hourly[0].temp);
+                    daily.shift();
+                    var str1 = '';
+                    $.each(daily, function (index, value) {
+//                        $(".bian .wen").html(+value.night.templow + "~" +value.day.temphigh + "℃");
+//                        $(".bian .shang1").html(value.date);
+//                        $(".bian .zuo1").html(value.week);
+//                        var src1= "img/weathercn02/" + value.day.img + ".png";
+//                        $(".bian img").attr("src", src1);
+//                        $(".bian .tian").html(value.day.weather);
+//                        $(".bian .clound").text(value.day.winddirect+value.day.windpower+"风");
+                        str1 += `<li><div class="num1">
+                                        <div class="right1">
+                                            <span class="shang1">
+                                                 ${value.date}
+                                            </span>
+                                            <span class="zuo1">
+                                                 ${value.week}
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <img src="img/weathercn02/${value.day.img}.png">
+                                <div class="num2">
+                                <span class="wen">
+                                     ${value.night.templow} ~${value.day.temphigh}℃
+                                </span>
+                                <span class="tian">
+                                      ${value.day.weather}
+                                </span>
+                                <span class="clound">
+                                       ${value.day.winddirect}${value.day.windpower}
+                                </span>
+                                </div></li>`
+                        $("main ul").html(str1);
+                    })
+                }
+            }
+        })
+    })
+
+</script>
+</html>
