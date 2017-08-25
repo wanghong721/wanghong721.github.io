@@ -67,7 +67,7 @@ $("#main").fullpage({
     }
 percent(canvas1,90,"#CEAC7C");
 percent(canvas2,85,"#1295DE");
-percent(canvas3,85,"yellow");
+percent(canvas3,86,"yellow");
 $(function(){
 
     var imgL=$(".pic .box").size();
