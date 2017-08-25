@@ -66,7 +66,7 @@ $("#main").fullpage({
         fn();
     }
 percent(canvas1,80,"#CEAC7C");
-percent(canvas2,90,"#1295DE");
+percent(canvas2,85,"#1295DE");
 percent(canvas3,85,"yellow");
 $(function(){
 
