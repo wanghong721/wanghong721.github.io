@@ -29,6 +29,10 @@ body{
     background:url("../img/3.jpg");
     background-size: cover;
     border-radius: 10%;
+    border: 1px solid #C3913E;
+}
+.left>.kuai:first-child{
+    /*margin-top: 30%;*/
 }
 .left .kuai{
     width: 80%;
